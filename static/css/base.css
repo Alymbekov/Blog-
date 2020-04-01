@@ -1,0 +1,33 @@
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 18px;
+}
+
+header {
+    border-bottom: 1px solid #999;
+    margin-bottom: 2rem;
+    display: flex;
+}
+
+header h1 a {
+    color: red;
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+.post-entry {
+    width: 500px;
+    border: 2px solid #34495e;
+}
+.post-entry > h3 > a{
+    text-decoration: none;
+    color: #27ae60;
+}
+.post-entry > p {
+    font-size: 16px;
+    color: #3498db;
+}
+
