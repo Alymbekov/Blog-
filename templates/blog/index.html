@@ -3,9 +3,9 @@
 {% block content %}
     {% for post in object_list %}
         <div class="post-entry">
-            <h3><a href="">
-                {{post.title}}
-            </a></h3>
+            <h3>
+                <a href="{% url 'post_detail' post.pk %}">{{post.title}}</a></h3>
+                <!-- http://localhost/blog/post/ -->
             <p>
                 {{post.body}}
             </p>
