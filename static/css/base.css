@@ -1,5 +1,5 @@
 body {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Source Sans Pro', sans-serif;
     font-size: 18px;
 }
 
@@ -14,20 +14,33 @@ header h1 a {
     text-decoration: none;
 }
 
-.container {
-    display: flex;
-    justify-content: center;
-}
-.post-entry {
-    width: 500px;
-    border: 2px solid #34495e;
-}
-.post-entry > h3 > a{
-    text-decoration: none;
-    color: #27ae60;
-}
-.post-entry > p {
-    font-size: 16px;
-    color: #3498db;
+.nav-left {
+    margin-right: auto;
 }
 
+.nav-right {
+    display: flex;
+    padding-top: 2rem;
+}
+
+.post-entry {
+    margin-bottom: 2rem;
+}
+
+.post-entry h2 {
+    margin: 0.5rem 0;
+}
+
+.post-entry h2 a, .post-entry h2 a:visited {
+    color: blue;
+    text-decoration: none;
+}
+
+.post-entry p {
+    margin: 0;
+    font-weight: 400;
+}
+
+.post-entry h2 a:hover {
+    color: red;
+}

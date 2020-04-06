@@ -36,5 +36,15 @@ class BlogTests(TestCase):
         self.assertEqual(response.status_code, 200) #200 == 200
         self.assertContains(response, 'Just Test body')
         self.assertTemplateUsed(response, 'blog/index.html')
+    
+    def test_post_detail_view(self):
+        response = self.client.get('/blog/post/1/')
+        no_response = self.client.get('/blog/post/9999/')
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(no_response.status_code, 404)
+        self.assertContains(response, 'Just test Title')
+        self.assertTemplateUsed(response, 'blog/post_detail.html')
+
         
+
 
