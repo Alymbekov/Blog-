@@ -13,5 +13,11 @@
         <p>ID поста {{object.id}}</p>
 
     </div>
+    <a href="{% url 'blog_post_edit' post.pk %}">
+        <button class='btn-update'>Update Post</button>
+    </a>
+    <a href="{% url 'blog_post_delete' post.pk %}">
+        <button class='btn-delete'>Delete Post</button>
+    </a>
 
 {% endblock %}
