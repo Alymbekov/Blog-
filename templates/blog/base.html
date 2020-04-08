@@ -8,14 +8,25 @@
 </head>
 
 <body>
-    <div>
+    <div>        
+        {% if user.is_authenticated %}
         <header>
             <div class="nav-left">
                 <h1><a href="{% url 'index' %}">My blog</a></h1>
             </div>
             <div class="nav-right">
-                <a href="{% url 'post_new' %}">New Post</a> </div>
+                <a href="{% url 'logout' %}"><button >Logout</button></a> 
+                <a href="{% url 'post_new' %}"><button> New Post</button></a> 
+            </div>
         </header>
+        <h3>Hello {{user.username}}</h3>
+        {% else %}
+        <strong><p>You must first login</p></strong>
+        <!-- http://localhost:8000/accounts/login -->
+        <a href="{% url 'login' %}"><button class="btn-update">Sing in</button></a>
+        <a href="{% url 'signup' %}"><button class="btn-delete">Sing UP</button></a>
+
+        {% endif %}
         {% block content %} {% endblock content %}
     </div>
 </body>

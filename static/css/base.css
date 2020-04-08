@@ -10,7 +10,7 @@ header {
 }
 
 header h1 a {
-    color: red;
+    color: yellowgreen;
     text-decoration: none;
 }
 
@@ -65,4 +65,25 @@ header h1 a {
     color: #fffc;
     cursor: pointer;
     font-size: 18px;
+}
+
+
+.nav-right > a:nth-child(1) > button {
+    width: 100px;
+    height: 30px;
+    border-radius: 30px;
+    color: white;
+    background-color: turquoise;
+    border: none;
+    font-size: 17px;
+}
+
+.nav-right > a:nth-child(2) > button{
+    width: 100px;
+    height: 30px;
+    border-radius: 30px;
+    font-size: 17px;
+    color: white;
+    background-color: yellowgreen;
+    border: none;
 }
